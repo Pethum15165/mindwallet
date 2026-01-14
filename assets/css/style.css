@@ -1,0 +1,478 @@
+/* =====================
+   GLOBAL RESET
+===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0f172a;
+    color: #e5e7eb;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =====================
+   NAVBAR STYLES
+===================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0f172a; /* dark background */
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    color: #38bdf8; /* MindWallet blue */
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.navbar .nav-links a {
+    color: #e5e7eb; /* light text */
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #38bdf8; /* hover color */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .navbar .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .navbar .nav-links a {
+        margin-left: 0;
+    }
+}
+
+/* =====================
+   HERO SECTION (FINAL)
+===================== */
+.hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    background: url("../images/hero.jpg") center / cover no-repeat;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(2, 6, 23, 0.88),
+        rgba(2, 6, 23, 0.78)
+    );
+    z-index: 1;
+}
+
+/* Content */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+.hero-content h1 {
+    font-size: 52px;
+    line-height: 1.2;
+    margin: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #cbd5f5;
+    max-width: 650px;
+    margin: 0 auto 35px;
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.primary-btn {
+    background: #38bdf8;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #020617;
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 1px solid #38bdf8;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #38bdf8;
+    cursor: pointer;
+}
+/* ===== Learn Page – Tips Section ===== */
+
+.learn-tips {
+    padding: 80px 60px;
+    background-color: #0f172a; /* matches site dark tone */
+}
+
+.learn-tips h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #e5e7eb;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.tip-card {
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 16px;
+    padding: 28px;
+    color: #cbd5f5;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-6px);
+    border-color: #38bdf8;
+}
+
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =====================
+   SECTIONS
+===================== */
+section {
+    padding: 80px 60px;
+}
+
+.section-desc {
+    color: #cbd5f5;
+    max-width: 600px;
+    margin-top: 10px;
+}
+
+/* =====================
+   CARDS
+===================== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #020617;
+    padding: 30px;
+    border-radius: 14px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+}
+
+/* =====================
+   ABOUT PAGE BACKGROUND
+===================== */
+.about-bg {
+    position: relative;
+    background: url("../images/about.jpg") center / cover no-repeat;
+    padding: 100px 60px;
+}
+
+.about-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(2, 6, 23, 0.9);
+    z-index: 1;
+}
+
+.about-page {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.about-page h1 {
+    font-size: 36px;
+    color: #38bdf8;
+    margin-bottom: 20px;
+}
+
+.about-page p {
+    font-size: 16px;
+    color: #cbd5f5;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+/* About image */
+.about-image img {
+    max-width: 700px;
+    width: 100%;
+    margin: 40px auto;
+    display: block;
+    border-radius: 16px;
+    filter: brightness(0.9);
+}
+
+/* =====================
+   CTA SECTION
+===================== */
+.cta {
+    background: #020617;
+    text-align: center;
+    padding: 80px 60px;
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+    background: #020617;
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 900px) {
+    section {
+        padding: 70px 30px;
+    }
+
+    .navbar {
+        padding: 20px 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .about-page h1 {
+        font-size: 26px;
+    }
+}
+  /* ===== Learn Page ===== */
+
+.learn-hero {
+    padding: 120px 40px;
+    text-align: center;
+    background-color: #020617;
+}
+
+.learn-hero h1 {
+    font-size: 3rem;
+    color: #f8fafc;
+}
+
+.learn-hero p {
+    margin-top: 10px;
+    color: #94a3b8;
+}
+
+/* Tips Section */
+.learn-tips {
+    padding: 80px 60px;
+    background-color: #0f172a;
+}
+
+.learn-tips h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #e5e7eb;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.tip-card {
+    background-color: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 16px;
+    padding: 28px;
+    color: #cbd5f5;
+}
+
+
+/* Tips */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.tip-card {
+    background: #020617;
+    padding: 25px;
+    border-radius: 14px;
+    color: #cbd5f5;
+    border: 1px solid #1e293b;
+    transition: 0.3s;
+}
+
+.tip-card:hover {
+    transform: translateY(-6px);
+    border-color: #38bdf8;
+}
+
+/* Content */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.content-card {
+    background: #020617;
+    padding: 30px;
+    border-radius: 18px;
+    border: 1px solid #1e293b;
+}
+
+.content-card h3 {
+    color: #f8fafc;
+    margin-bottom: 10px;
+}
+
+.content-card p {
+    color: #94a3b8;
+}
+  /* ===============================
+   TASK-11: MOBILE RESPONSIVENESS
+=============================== */
+
+/* Prevent horizontal scroll */
+html, body {
+    overflow-x: hidden;
+}
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 15px 20px;
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-links a {
+        margin-left: 0;
+    }
+}
+@media (max-width: 768px) {
+    section {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
+    .tip-card {
+        padding: 15px !important;
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr !important; /* stack cards vertically */
+        gap: 20px !important;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    section {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    h1 {
+        font-size: 2.4rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    .tips-grid {
+        grid-template-columns: 1fr 1fr; /* 2 columns on tablets */
+    }
+}
+  
